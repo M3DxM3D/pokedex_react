@@ -1,35 +1,37 @@
+import styles from './PokemonCard.module.css'
+
+
 function PokemonCard() {
-    return (
+    let pokemon = pokemonList[1]
+     
+return (
 
-        <div>
-            <figure className="card">
-                <img src="./src/assets/bulbizare.png" alt="bulbasaur" className="card-img"/>
-            </figure>
+    <div> {pokemon.imgSrc ?
+        
+        <figure className={styles.card}>
 
-            <figcaption>bulbasaur</figcaption>
-        </div>
+            <img src={  pokemon.imgSrc }  alt={ pokemon.name } className={styles.cardImg}  />
+            <figcaption>{pokemon.name}</figcaption> 
+
+        </figure>
+        
+        : 
+        <figure className={styles.card}>
+    <p>???</p>
+    <figcaption>{pokemon.name}</figcaption>
+    </figure>
+    } 
+    
+    
+    </div>
 
 
-const pokemon = pokemonList[1];
-    return (
-        <div> {
-            pokemon.image ? <img src={
-                    pokemon.image
-                }
-                alt={
-                    pokemon.name
-                }/> : <p>???</p>
-        } </div>
-    );
-
-    );
-
+)
 
 };
 
+
 const pokemonList = [
-
-
     {
         name: "bulbasaur",
         imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
@@ -37,6 +39,7 @@ const pokemonList = [
         name: "mew"
     },
 ];
+
 
 
 export default PokemonCard;
