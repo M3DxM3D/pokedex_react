@@ -1,8 +1,7 @@
 import styles from './PokemonCard.module.css'
 
 
-function PokemonCard() {
-    let pokemon = pokemonList[1]
+function PokemonCard({pokemon }) {
      
 return (
 
@@ -17,7 +16,7 @@ return (
         
         : 
         <figure className={styles.card}>
-    <p>???</p>
+            <p>???</p>
     <figcaption>{pokemon.name}</figcaption>
     </figure>
     } 
@@ -28,18 +27,7 @@ return (
 
 )
 
+
 };
-
-
-const pokemonList = [
-    {
-        name: "bulbasaur",
-        imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-    }, {
-        name: "mew"
-    },
-];
-
-
 
 export default PokemonCard;
