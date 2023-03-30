@@ -1,5 +1,5 @@
 import styles from './PokemonCard.module.css'
-import PropTypes from "prop-types";
+
 
 
 
@@ -25,17 +25,6 @@ return (
 
 )
 
-
-PokemonCard.propTypes= {
-
-pokemon: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    imgSrc:PropTypes.string,
-    }).isRequired,
-
-
-
-}
 
 
 };
