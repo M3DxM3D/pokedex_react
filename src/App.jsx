@@ -1,5 +1,6 @@
 import './App.css'
 import PokemonCard from './components/PokemonCard';
+import NavBar from './components/NavBar';
 import {useState} from 'react';
 import PropTypes from "prop-types";
 
@@ -41,23 +42,12 @@ PokemonCard.propTypes = {
         
         const [pokemonIndex, setPokemonIndex] = useState(0);
         
-        const handlePrevious = () => {
-            setPokemonIndex(pokemonIndex>0? pokemonIndex- 1: pokemonIndex);
-            
-        };
-        
-        const handleNext = () => {
-            setPokemonIndex(pokemonIndex< pokemonList.length - 1? pokemonIndex + 1: pokemonIndex);
-            
-        };
-        return (
-
-
-        <div>
-            <PokemonCard pokemon={ pokemonList[pokemonIndex]}/>
-            <button onClick={handlePrevious}>précédent</button>
-            <button onClick={handleNext}>suivant </button>
-        </div>
+         return (
+                       
+        <>
+        <PokemonCard pokemon={ pokemonList[pokemonIndex]}/> 
+        <NavBar pokeIndex = {pokemonIndex} setPokeIndex = {setPokemonIndex} pokeList={pokemonList} />
+        </>
     );
 
 
