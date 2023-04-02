@@ -39,17 +39,15 @@ PokemonCard.propTypes = {
     
     function App() {
         
+        useEffect( () => {  alert ("hello pokemon trainer :)")   }, []   )
         
         const [pokemonIndex, setPokemonIndex] = useState(0);
 
-        useEffect( ()=> {  alert ("hello pokemon trainer :)")   }, []   )
-
-             
-         return (
-                       
-        <>
-
-
+        
+        
+        return (
+            
+       <>
         <PokemonCard pokemon={ pokemonList[pokemonIndex]}/> 
         <NavBar pokeIndex = {pokemonIndex} setPokeIndex = {setPokemonIndex} pokeList={pokemonList} />
         </>

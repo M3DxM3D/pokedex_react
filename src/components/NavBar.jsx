@@ -11,17 +11,21 @@ function NavBar({pokeIndex, setPokeIndex, pokeList}) {
             setPokeIndex(pokeIndex + 1)
         }
 
+      
+        pokeList[pokeIndex] === pokeList[3] && alert('pika pikachu !!!') ;
         
-        
-        return(
-          
-        <>
+        return (
+            
+            <>
+            
           { pokeIndex > 0 && <button onClick={handlePrevious}>précédent</button>} 
           {pokeIndex < pokeList.length - 1 && <button onClick={handleNext}>suivant</button>}
       
       </>
+      
+        )
 
-    )
+    
 }
 
 export default NavBar
