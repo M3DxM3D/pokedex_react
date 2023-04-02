@@ -15,7 +15,7 @@ function NavBar({pokeIndex, setPokeIndex, pokeList}) {
         
         return(
           
-          <>
+        <>
           { pokeIndex > 0 && <button onClick={handlePrevious}>précédent</button>} 
           {pokeIndex < pokeList.length - 1 && <button onClick={handleNext}>suivant</button>}
       

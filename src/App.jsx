@@ -1,7 +1,7 @@
 import './App.css'
 import PokemonCard from './components/PokemonCard';
 import NavBar from './components/NavBar';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import PropTypes from "prop-types";
 
 
@@ -41,10 +41,15 @@ PokemonCard.propTypes = {
         
         
         const [pokemonIndex, setPokemonIndex] = useState(0);
-        
+
+        useEffect( ()=> {  alert ("hello pokemon trainer :)")   }, []   )
+
+             
          return (
                        
         <>
+
+
         <PokemonCard pokemon={ pokemonList[pokemonIndex]}/> 
         <NavBar pokeIndex = {pokemonIndex} setPokeIndex = {setPokemonIndex} pokeList={pokemonList} />
         </>
